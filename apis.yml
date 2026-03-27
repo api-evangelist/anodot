@@ -1,0 +1,37 @@
+aid: anodot
+name: Anodot
+description: >-
+  Anodot is an AI-powered cloud cost management and business monitoring platform
+  providing autonomous cost optimization and anomaly detection.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - FinOps
+  - Cloud Cost Management
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/anodot/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: anodot:anodot
+    name: Anodot
+    description: >-
+      Anodot is an AI-powered cloud cost management and business monitoring
+      platform providing autonomous cost optimization and anomaly detection.
+    humanURL: https://www.anodot.com/
+    tags:
+      - FinOps
+    properties:
+      - type: Documentation
+        url: https://docs.anodot.com/
+      - type: Getting Started
+        url: https://docs.anodot.com/
+common:
+  - type: Website
+    url: https://www.anodot.com/
+  - type: Documentation
+    url: https://docs.anodot.com/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
