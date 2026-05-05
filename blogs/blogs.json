@@ -1,0 +1,13 @@
+{
+  "repo": "anodot",
+  "feeds": [
+    {
+      "source": "https://www.anodot.com/blog/",
+      "feed_url": "https://www.anodot.com/blog/feed/",
+      "saved": 10,
+      "title": "The Business Monitoring Blog | Anodot"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:22:04Z"
+}
