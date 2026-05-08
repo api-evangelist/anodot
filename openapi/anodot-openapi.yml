@@ -1,0 +1,466 @@
+openapi: 3.1.0
+info:
+  title: Anodot Business Monitoring API
+  version: 1.0.0
+  description: >-
+    Minimal OpenAPI specification for the Anodot Business Monitoring API,
+    covering authentication, anomalies, users and groups, forecasting, alerts,
+    and alert actions. Generated from the public Anodot documentation.
+servers:
+  - url: https://app.anodot.com
+x-generated-from: https://docs.anodot.com/
+x-generated-by: claude-crawl-2026-05-08
+paths:
+  /api/v2/access-token/:
+    post:
+      summary: Request a bearer token
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/customers/id:
+    get:
+      summary: Retrieve customer ID
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/anomalies:
+    get:
+      summary: Get all anomalies based on a search query
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/anomalies/count:
+    get:
+      summary: Count anomalies in a timeframe
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/anomalies/tokenMap:
+    get:
+      summary: Retrieves the token map for an anomaly
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/anomalies/{anomalyId}/metrics:
+    get:
+      summary: Get anomaly data with abnormal metrics
+      parameters:
+        - name: anomalyId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/anomalies/{anomalyId}/metric/{metricId}:
+    get:
+      summary: Retrieve specific metric anomaly data
+      parameters:
+        - name: anomalyId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: metricId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/users:
+    get:
+      summary: Get the list of all users in the account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      summary: Create user in account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/groups:
+    get:
+      summary: Get the list of all groups in the account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      summary: Create group in account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/tasks:
+    get:
+      summary: Get forecast tasks list
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/tasks/{taskId}/results:
+    get:
+      summary: Get forecast results for specific task
+      parameters:
+        - name: taskId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/tasks/{taskId}/aggregate:
+    get:
+      summary: Get aggregate forecast results
+      parameters:
+        - name: taskId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/metrics:
+    get:
+      summary: Get all forecast metrics
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/tasks/{taskId}/metrics:
+    get:
+      summary: Get metrics for specific task
+      parameters:
+        - name: taskId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/tasks/{taskId}/metrics/{metricId}/results:
+    get:
+      summary: Get results for metric per task
+      parameters:
+        - name: taskId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: metricId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/metrics/{metricId}/results:
+    get:
+      summary: Get results for specific metric
+      parameters:
+        - name: metricId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/metrics/{metricId}/history:
+    get:
+      summary: Get historical forecast results
+      parameters:
+        - name: metricId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/forecast/tasks/{taskId}/history:
+    get:
+      summary: Get forecast history per task
+      parameters:
+        - name: taskId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alerts:
+    get:
+      summary: Get all alert configurations
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      summary: Create new alert configuration
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/alerts/{alertID}:
+    get:
+      summary: Retrieve single alert configuration
+      parameters:
+        - name: alertID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alerts/{alertID}:
+    put:
+      summary: Edit alert configuration
+      parameters:
+        - name: alertID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+    delete:
+      summary: Delete alert
+      parameters:
+        - name: alertID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alerts/{alertID}/pause:
+    post:
+      summary: Pause alert
+      parameters:
+        - name: alertID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alerts/{alertID}/resume:
+    post:
+      summary: Resume alert
+      parameters:
+        - name: alertID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alert-actions:
+    get:
+      summary: Get all alert actions
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alert-actions/{actionId}:
+    get:
+      summary: Get specific alert action
+      parameters:
+        - name: actionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alert-actions/create:
+    post:
+      summary: Create new alert action
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alert-actions/{actionID}:
+    put:
+      summary: Update alert action
+      parameters:
+        - name: actionID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+    delete:
+      summary: Delete alert action
+      parameters:
+        - name: actionID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alert-actions/usage:
+    get:
+      summary: Get alert action usage statistics
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v2/alert-actions/usage/{actionID}:
+    get:
+      summary: Get usage by action ID
+      parameters:
+        - name: actionID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object

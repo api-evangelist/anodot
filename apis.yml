@@ -48,6 +48,8 @@ apis:
         type: Authentication
       - url: https://www.anodot.com/
         type: Website
+      - url: openapi/anodot-openapi.yml
+        type: OpenAPI
   - aid: anodot:anodot-cloud-cost-api
     name: Anodot Cloud Cost Management API
     description: >-
