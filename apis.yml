@@ -103,6 +103,10 @@ common:
   - url: https://github.com/anodot
     name: Anodot GitHub Organization
     type: GitHubOrganization
+  - type: Integrations
+    url: https://www.anodot.com/integrations/
+integrations:
+  - name: StatsD
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
