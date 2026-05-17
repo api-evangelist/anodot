@@ -69,7 +69,7 @@ apis:
       - Multi-Cloud
     properties:
       - url: https://cloudcost.anodot.com/hc/en-us/articles/9796736183964-What-s-New-in-Anodot-Cost
-        type: Changelog
+        type: ChangeLog
       - url: https://www.anodot.com/cloud-cost-management/
         type: Documentation
 common:
