@@ -1,0 +1,1262 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Anodot Business Monitoring API
+  description: 'Anodot Business Monitoring API. 34 operations. Lead operation: Retrieve single alert configuration. Self-contained
+    Naftiko capability covering one Anodot business surface.'
+  tags:
+  - Anodot
+  - Anodot Business Monitoring API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ANODOT_API_KEY: ANODOT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: anodot
+    baseUri: https://app.anodot.com
+    description: Anodot Business Monitoring API business capability. Self-contained, no shared references.
+    resources:
+    - name: api-alerts-alertID
+      path: /api/alerts/{alertID}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve single alert configuration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: alertID
+          in: path
+          type: string
+          required: true
+    - name: api-v2-access-token
+      path: /api/v2/access-token/
+      operations:
+      - name: post
+        method: POST
+        description: Request a bearer token
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-alert-actions
+      path: /api/v2/alert-actions
+      operations:
+      - name: get
+        method: GET
+        description: Get all alert actions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-alert-actions-create
+      path: /api/v2/alert-actions/create
+      operations:
+      - name: post
+        method: POST
+        description: Create new alert action
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-alert-actions-usage
+      path: /api/v2/alert-actions/usage
+      operations:
+      - name: get
+        method: GET
+        description: Get alert action usage statistics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-alert-actions-usage-actionID
+      path: /api/v2/alert-actions/usage/{actionID}
+      operations:
+      - name: get
+        method: GET
+        description: Get usage by action ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: actionID
+          in: path
+          type: string
+          required: true
+    - name: api-v2-alert-actions-actionID
+      path: /api/v2/alert-actions/{actionID}
+      operations:
+      - name: put
+        method: PUT
+        description: Update alert action
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: actionID
+          in: path
+          type: string
+          required: true
+      - name: delete
+        method: DELETE
+        description: Delete alert action
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: actionID
+          in: path
+          type: string
+          required: true
+    - name: api-v2-alert-actions-actionId
+      path: /api/v2/alert-actions/{actionId}
+      operations:
+      - name: get
+        method: GET
+        description: Get specific alert action
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: actionId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-alerts
+      path: /api/v2/alerts
+      operations:
+      - name: get
+        method: GET
+        description: Get all alert configurations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create new alert configuration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-alerts-alertID
+      path: /api/v2/alerts/{alertID}
+      operations:
+      - name: put
+        method: PUT
+        description: Edit alert configuration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: alertID
+          in: path
+          type: string
+          required: true
+      - name: delete
+        method: DELETE
+        description: Delete alert
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: alertID
+          in: path
+          type: string
+          required: true
+    - name: api-v2-alerts-alertID-pause
+      path: /api/v2/alerts/{alertID}/pause
+      operations:
+      - name: post
+        method: POST
+        description: Pause alert
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: alertID
+          in: path
+          type: string
+          required: true
+    - name: api-v2-alerts-alertID-resume
+      path: /api/v2/alerts/{alertID}/resume
+      operations:
+      - name: post
+        method: POST
+        description: Resume alert
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: alertID
+          in: path
+          type: string
+          required: true
+    - name: api-v2-anomalies
+      path: /api/v2/anomalies
+      operations:
+      - name: get
+        method: GET
+        description: Get all anomalies based on a search query
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-anomalies-count
+      path: /api/v2/anomalies/count
+      operations:
+      - name: get
+        method: GET
+        description: Count anomalies in a timeframe
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-anomalies-tokenMap
+      path: /api/v2/anomalies/tokenMap
+      operations:
+      - name: get
+        method: GET
+        description: Retrieves the token map for an anomaly
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-anomalies-anomalyId-metric-metricId
+      path: /api/v2/anomalies/{anomalyId}/metric/{metricId}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve specific metric anomaly data
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: anomalyId
+          in: path
+          type: string
+          required: true
+        - name: metricId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-anomalies-anomalyId-metrics
+      path: /api/v2/anomalies/{anomalyId}/metrics
+      operations:
+      - name: get
+        method: GET
+        description: Get anomaly data with abnormal metrics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: anomalyId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-customers-id
+      path: /api/v2/customers/id
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve customer ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-forecast-metrics
+      path: /api/v2/forecast/metrics
+      operations:
+      - name: get
+        method: GET
+        description: Get all forecast metrics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-forecast-metrics-metricId-history
+      path: /api/v2/forecast/metrics/{metricId}/history
+      operations:
+      - name: get
+        method: GET
+        description: Get historical forecast results
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: metricId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-forecast-metrics-metricId-results
+      path: /api/v2/forecast/metrics/{metricId}/results
+      operations:
+      - name: get
+        method: GET
+        description: Get results for specific metric
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: metricId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-forecast-tasks
+      path: /api/v2/forecast/tasks
+      operations:
+      - name: get
+        method: GET
+        description: Get forecast tasks list
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-forecast-tasks-taskId-aggregate
+      path: /api/v2/forecast/tasks/{taskId}/aggregate
+      operations:
+      - name: get
+        method: GET
+        description: Get aggregate forecast results
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-forecast-tasks-taskId-history
+      path: /api/v2/forecast/tasks/{taskId}/history
+      operations:
+      - name: get
+        method: GET
+        description: Get forecast history per task
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-forecast-tasks-taskId-metrics
+      path: /api/v2/forecast/tasks/{taskId}/metrics
+      operations:
+      - name: get
+        method: GET
+        description: Get metrics for specific task
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-forecast-tasks-taskId-metrics-metricId-results
+      path: /api/v2/forecast/tasks/{taskId}/metrics/{metricId}/results
+      operations:
+      - name: get
+        method: GET
+        description: Get results for metric per task
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskId
+          in: path
+          type: string
+          required: true
+        - name: metricId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-forecast-tasks-taskId-results
+      path: /api/v2/forecast/tasks/{taskId}/results
+      operations:
+      - name: get
+        method: GET
+        description: Get forecast results for specific task
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskId
+          in: path
+          type: string
+          required: true
+    - name: api-v2-groups
+      path: /api/v2/groups
+      operations:
+      - name: get
+        method: GET
+        description: Get the list of all groups in the account
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create group in account
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-users
+      path: /api/v2/users
+      operations:
+      - name: get
+        method: GET
+        description: Get the list of all users in the account
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Create user in account
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: anodot-rest
+    port: 8080
+    description: REST adapter for Anodot Business Monitoring API. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/alerts/{alertid}
+      name: api-alerts-alertid
+      description: REST surface for api-alerts-alertID.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve single alert configuration
+        call: anodot.get
+        with:
+          alertID: rest.alertID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/access-token
+      name: api-v2-access-token
+      description: REST surface for api-v2-access-token.
+      operations:
+      - method: POST
+        name: post
+        description: Request a bearer token
+        call: anodot.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alert-actions
+      name: api-v2-alert-actions
+      description: REST surface for api-v2-alert-actions.
+      operations:
+      - method: GET
+        name: get
+        description: Get all alert actions
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alert-actions/create
+      name: api-v2-alert-actions-create
+      description: REST surface for api-v2-alert-actions-create.
+      operations:
+      - method: POST
+        name: post
+        description: Create new alert action
+        call: anodot.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alert-actions/usage
+      name: api-v2-alert-actions-usage
+      description: REST surface for api-v2-alert-actions-usage.
+      operations:
+      - method: GET
+        name: get
+        description: Get alert action usage statistics
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alert-actions/usage/{actionid}
+      name: api-v2-alert-actions-usage-actionid
+      description: REST surface for api-v2-alert-actions-usage-actionID.
+      operations:
+      - method: GET
+        name: get
+        description: Get usage by action ID
+        call: anodot.get
+        with:
+          actionID: rest.actionID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alert-actions/{actionid}
+      name: api-v2-alert-actions-actionid
+      description: REST surface for api-v2-alert-actions-actionID.
+      operations:
+      - method: PUT
+        name: put
+        description: Update alert action
+        call: anodot.put
+        with:
+          actionID: rest.actionID
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete alert action
+        call: anodot.delete
+        with:
+          actionID: rest.actionID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alert-actions/{actionid}
+      name: api-v2-alert-actions-actionid
+      description: REST surface for api-v2-alert-actions-actionId.
+      operations:
+      - method: GET
+        name: get
+        description: Get specific alert action
+        call: anodot.get
+        with:
+          actionId: rest.actionId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alerts
+      name: api-v2-alerts
+      description: REST surface for api-v2-alerts.
+      operations:
+      - method: GET
+        name: get
+        description: Get all alert configurations
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create new alert configuration
+        call: anodot.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alerts/{alertid}
+      name: api-v2-alerts-alertid
+      description: REST surface for api-v2-alerts-alertID.
+      operations:
+      - method: PUT
+        name: put
+        description: Edit alert configuration
+        call: anodot.put
+        with:
+          alertID: rest.alertID
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete alert
+        call: anodot.delete
+        with:
+          alertID: rest.alertID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alerts/{alertid}/pause
+      name: api-v2-alerts-alertid-pause
+      description: REST surface for api-v2-alerts-alertID-pause.
+      operations:
+      - method: POST
+        name: post
+        description: Pause alert
+        call: anodot.post
+        with:
+          alertID: rest.alertID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/alerts/{alertid}/resume
+      name: api-v2-alerts-alertid-resume
+      description: REST surface for api-v2-alerts-alertID-resume.
+      operations:
+      - method: POST
+        name: post
+        description: Resume alert
+        call: anodot.post
+        with:
+          alertID: rest.alertID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/anomalies
+      name: api-v2-anomalies
+      description: REST surface for api-v2-anomalies.
+      operations:
+      - method: GET
+        name: get
+        description: Get all anomalies based on a search query
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/anomalies/count
+      name: api-v2-anomalies-count
+      description: REST surface for api-v2-anomalies-count.
+      operations:
+      - method: GET
+        name: get
+        description: Count anomalies in a timeframe
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/anomalies/tokenmap
+      name: api-v2-anomalies-tokenmap
+      description: REST surface for api-v2-anomalies-tokenMap.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieves the token map for an anomaly
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/anomalies/{anomalyid}/metric/{metricid}
+      name: api-v2-anomalies-anomalyid-metric-metricid
+      description: REST surface for api-v2-anomalies-anomalyId-metric-metricId.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve specific metric anomaly data
+        call: anodot.get
+        with:
+          anomalyId: rest.anomalyId
+          metricId: rest.metricId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/anomalies/{anomalyid}/metrics
+      name: api-v2-anomalies-anomalyid-metrics
+      description: REST surface for api-v2-anomalies-anomalyId-metrics.
+      operations:
+      - method: GET
+        name: get
+        description: Get anomaly data with abnormal metrics
+        call: anodot.get
+        with:
+          anomalyId: rest.anomalyId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/customers/id
+      name: api-v2-customers-id
+      description: REST surface for api-v2-customers-id.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve customer ID
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/metrics
+      name: api-v2-forecast-metrics
+      description: REST surface for api-v2-forecast-metrics.
+      operations:
+      - method: GET
+        name: get
+        description: Get all forecast metrics
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/metrics/{metricid}/history
+      name: api-v2-forecast-metrics-metricid-history
+      description: REST surface for api-v2-forecast-metrics-metricId-history.
+      operations:
+      - method: GET
+        name: get
+        description: Get historical forecast results
+        call: anodot.get
+        with:
+          metricId: rest.metricId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/metrics/{metricid}/results
+      name: api-v2-forecast-metrics-metricid-results
+      description: REST surface for api-v2-forecast-metrics-metricId-results.
+      operations:
+      - method: GET
+        name: get
+        description: Get results for specific metric
+        call: anodot.get
+        with:
+          metricId: rest.metricId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/tasks
+      name: api-v2-forecast-tasks
+      description: REST surface for api-v2-forecast-tasks.
+      operations:
+      - method: GET
+        name: get
+        description: Get forecast tasks list
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/tasks/{taskid}/aggregate
+      name: api-v2-forecast-tasks-taskid-aggregate
+      description: REST surface for api-v2-forecast-tasks-taskId-aggregate.
+      operations:
+      - method: GET
+        name: get
+        description: Get aggregate forecast results
+        call: anodot.get
+        with:
+          taskId: rest.taskId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/tasks/{taskid}/history
+      name: api-v2-forecast-tasks-taskid-history
+      description: REST surface for api-v2-forecast-tasks-taskId-history.
+      operations:
+      - method: GET
+        name: get
+        description: Get forecast history per task
+        call: anodot.get
+        with:
+          taskId: rest.taskId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/tasks/{taskid}/metrics
+      name: api-v2-forecast-tasks-taskid-metrics
+      description: REST surface for api-v2-forecast-tasks-taskId-metrics.
+      operations:
+      - method: GET
+        name: get
+        description: Get metrics for specific task
+        call: anodot.get
+        with:
+          taskId: rest.taskId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/tasks/{taskid}/metrics/{metricid}/results
+      name: api-v2-forecast-tasks-taskid-metrics-metricid-results
+      description: REST surface for api-v2-forecast-tasks-taskId-metrics-metricId-results.
+      operations:
+      - method: GET
+        name: get
+        description: Get results for metric per task
+        call: anodot.get
+        with:
+          taskId: rest.taskId
+          metricId: rest.metricId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/forecast/tasks/{taskid}/results
+      name: api-v2-forecast-tasks-taskid-results
+      description: REST surface for api-v2-forecast-tasks-taskId-results.
+      operations:
+      - method: GET
+        name: get
+        description: Get forecast results for specific task
+        call: anodot.get
+        with:
+          taskId: rest.taskId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/groups
+      name: api-v2-groups
+      description: REST surface for api-v2-groups.
+      operations:
+      - method: GET
+        name: get
+        description: Get the list of all groups in the account
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create group in account
+        call: anodot.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v2/users
+      name: api-v2-users
+      description: REST surface for api-v2-users.
+      operations:
+      - method: GET
+        name: get
+        description: Get the list of all users in the account
+        call: anodot.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Create user in account
+        call: anodot.post
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: anodot-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Anodot Business Monitoring API. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: retrieve-single-alert-configuration
+      description: Retrieve single alert configuration
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        alertID: tools.alertID
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: request-bearer-token
+      description: Request a bearer token
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: anodot.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-all-alert-actions
+      description: Get all alert actions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-new-alert-action
+      description: Create new alert action
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: anodot.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-alert-action-usage-statistics
+      description: Get alert action usage statistics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-usage-action-id
+      description: Get usage by action ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        actionID: tools.actionID
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-alert-action
+      description: Update alert action
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: anodot.put
+      with:
+        actionID: tools.actionID
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-alert-action
+      description: Delete alert action
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: anodot.delete
+      with:
+        actionID: tools.actionID
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-specific-alert-action
+      description: Get specific alert action
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        actionId: tools.actionId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-all-alert-configurations
+      description: Get all alert configurations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-new-alert-configuration
+      description: Create new alert configuration
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: anodot.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: edit-alert-configuration
+      description: Edit alert configuration
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: anodot.put
+      with:
+        alertID: tools.alertID
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-alert
+      description: Delete alert
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: anodot.delete
+      with:
+        alertID: tools.alertID
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: pause-alert
+      description: Pause alert
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: anodot.post
+      with:
+        alertID: tools.alertID
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: resume-alert
+      description: Resume alert
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: anodot.post
+      with:
+        alertID: tools.alertID
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-all-anomalies-based-search
+      description: Get all anomalies based on a search query
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: count-anomalies-timeframe
+      description: Count anomalies in a timeframe
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieves-token-map-anomaly
+      description: Retrieves the token map for an anomaly
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-specific-metric-anomaly-data
+      description: Retrieve specific metric anomaly data
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        anomalyId: tools.anomalyId
+        metricId: tools.metricId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-anomaly-data-abnormal-metrics
+      description: Get anomaly data with abnormal metrics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        anomalyId: tools.anomalyId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-customer-id
+      description: Retrieve customer ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-all-forecast-metrics
+      description: Get all forecast metrics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-historical-forecast-results
+      description: Get historical forecast results
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        metricId: tools.metricId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-results-specific-metric
+      description: Get results for specific metric
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        metricId: tools.metricId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-forecast-tasks-list
+      description: Get forecast tasks list
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-aggregate-forecast-results
+      description: Get aggregate forecast results
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        taskId: tools.taskId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-forecast-history-per-task
+      description: Get forecast history per task
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        taskId: tools.taskId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-metrics-specific-task
+      description: Get metrics for specific task
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        taskId: tools.taskId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-results-metric-per-task
+      description: Get results for metric per task
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        taskId: tools.taskId
+        metricId: tools.metricId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-forecast-results-specific-task
+      description: Get forecast results for specific task
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      with:
+        taskId: tools.taskId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-list-all-groups-account
+      description: Get the list of all groups in the account
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-group-account
+      description: Create group in account
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: anodot.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-list-all-users-account
+      description: Get the list of all users in the account
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: anodot.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-user-account
+      description: Create user in account
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: anodot.post
+      outputParameters:
+      - type: object
+        mapping: $.
