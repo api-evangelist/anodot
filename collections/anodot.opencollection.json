@@ -1,0 +1,520 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Anodot Business Monitoring API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Request a bearer token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.anodot.com/api/v2/access-token/"
+      },
+      "docs": "Request a bearer token"
+    },
+    {
+      "info": {
+        "name": "Retrieve customer ID",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/customers/id"
+      },
+      "docs": "Retrieve customer ID"
+    },
+    {
+      "info": {
+        "name": "Get all anomalies based on a search query",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/anomalies"
+      },
+      "docs": "Get all anomalies based on a search query"
+    },
+    {
+      "info": {
+        "name": "Count anomalies in a timeframe",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/anomalies/count"
+      },
+      "docs": "Count anomalies in a timeframe"
+    },
+    {
+      "info": {
+        "name": "Retrieves the token map for an anomaly",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/anomalies/tokenMap"
+      },
+      "docs": "Retrieves the token map for an anomaly"
+    },
+    {
+      "info": {
+        "name": "Get anomaly data with abnormal metrics",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/anomalies/:anomalyId/metrics",
+        "params": [
+          {
+            "name": "anomalyId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get anomaly data with abnormal metrics"
+    },
+    {
+      "info": {
+        "name": "Retrieve specific metric anomaly data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/anomalies/:anomalyId/metric/:metricId",
+        "params": [
+          {
+            "name": "anomalyId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "metricId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve specific metric anomaly data"
+    },
+    {
+      "info": {
+        "name": "Get the list of all users in the account",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/users"
+      },
+      "docs": "Get the list of all users in the account"
+    },
+    {
+      "info": {
+        "name": "Create user in account",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.anodot.com/api/v2/users"
+      },
+      "docs": "Create user in account"
+    },
+    {
+      "info": {
+        "name": "Get the list of all groups in the account",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/groups"
+      },
+      "docs": "Get the list of all groups in the account"
+    },
+    {
+      "info": {
+        "name": "Create group in account",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.anodot.com/api/v2/groups"
+      },
+      "docs": "Create group in account"
+    },
+    {
+      "info": {
+        "name": "Get forecast tasks list",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/tasks"
+      },
+      "docs": "Get forecast tasks list"
+    },
+    {
+      "info": {
+        "name": "Get forecast results for specific task",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/results",
+        "params": [
+          {
+            "name": "taskId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get forecast results for specific task"
+    },
+    {
+      "info": {
+        "name": "Get aggregate forecast results",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/aggregate",
+        "params": [
+          {
+            "name": "taskId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get aggregate forecast results"
+    },
+    {
+      "info": {
+        "name": "Get all forecast metrics",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/metrics"
+      },
+      "docs": "Get all forecast metrics"
+    },
+    {
+      "info": {
+        "name": "Get metrics for specific task",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/metrics",
+        "params": [
+          {
+            "name": "taskId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get metrics for specific task"
+    },
+    {
+      "info": {
+        "name": "Get results for metric per task",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/metrics/:metricId/results",
+        "params": [
+          {
+            "name": "taskId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "metricId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get results for metric per task"
+    },
+    {
+      "info": {
+        "name": "Get results for specific metric",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/metrics/:metricId/results",
+        "params": [
+          {
+            "name": "metricId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get results for specific metric"
+    },
+    {
+      "info": {
+        "name": "Get historical forecast results",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/metrics/:metricId/history",
+        "params": [
+          {
+            "name": "metricId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get historical forecast results"
+    },
+    {
+      "info": {
+        "name": "Get forecast history per task",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/history",
+        "params": [
+          {
+            "name": "taskId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get forecast history per task"
+    },
+    {
+      "info": {
+        "name": "Get all alert configurations",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/alerts"
+      },
+      "docs": "Get all alert configurations"
+    },
+    {
+      "info": {
+        "name": "Create new alert configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.anodot.com/api/v2/alerts"
+      },
+      "docs": "Create new alert configuration"
+    },
+    {
+      "info": {
+        "name": "Retrieve single alert configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/alerts/:alertID",
+        "params": [
+          {
+            "name": "alertID",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve single alert configuration"
+    },
+    {
+      "info": {
+        "name": "Edit alert configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://app.anodot.com/api/v2/alerts/:alertID",
+        "params": [
+          {
+            "name": "alertID",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Edit alert configuration"
+    },
+    {
+      "info": {
+        "name": "Delete alert",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://app.anodot.com/api/v2/alerts/:alertID",
+        "params": [
+          {
+            "name": "alertID",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete alert"
+    },
+    {
+      "info": {
+        "name": "Pause alert",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.anodot.com/api/v2/alerts/:alertID/pause",
+        "params": [
+          {
+            "name": "alertID",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Pause alert"
+    },
+    {
+      "info": {
+        "name": "Resume alert",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.anodot.com/api/v2/alerts/:alertID/resume",
+        "params": [
+          {
+            "name": "alertID",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Resume alert"
+    },
+    {
+      "info": {
+        "name": "Get all alert actions",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/alert-actions"
+      },
+      "docs": "Get all alert actions"
+    },
+    {
+      "info": {
+        "name": "Get specific alert action",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/alert-actions/:actionId",
+        "params": [
+          {
+            "name": "actionId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get specific alert action"
+    },
+    {
+      "info": {
+        "name": "Create new alert action",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.anodot.com/api/v2/alert-actions/create"
+      },
+      "docs": "Create new alert action"
+    },
+    {
+      "info": {
+        "name": "Update alert action",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://app.anodot.com/api/v2/alert-actions/:actionID",
+        "params": [
+          {
+            "name": "actionID",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update alert action"
+    },
+    {
+      "info": {
+        "name": "Delete alert action",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://app.anodot.com/api/v2/alert-actions/:actionID",
+        "params": [
+          {
+            "name": "actionID",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete alert action"
+    },
+    {
+      "info": {
+        "name": "Get alert action usage statistics",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/alert-actions/usage"
+      },
+      "docs": "Get alert action usage statistics"
+    },
+    {
+      "info": {
+        "name": "Get usage by action ID",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.anodot.com/api/v2/alert-actions/usage/:actionID",
+        "params": [
+          {
+            "name": "actionID",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get usage by action ID"
+    }
+  ],
+  "bundled": true
+}
