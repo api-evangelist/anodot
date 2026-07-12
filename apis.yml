@@ -68,6 +68,8 @@ apis:
       - url: https://www.anodot.com/cloud-cost-management/
         type: Documentation
 common:
+  - type: DomainSecurity
+    url: security/anodot-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/anodot
   - url: https://www.anodot.com/
