@@ -68,6 +68,8 @@ apis:
       - url: https://www.anodot.com/cloud-cost-management/
         type: Documentation
 common:
+  - type: AgenticAccess
+    url: agentic-access/anodot-agentic-access.yml
   - type: DomainSecurity
     url: security/anodot-domain-security.yml
   - type: LinkedIn
