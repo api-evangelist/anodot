@@ -1,0 +1,35 @@
+openapi: 3.1.0
+info:
+  title: Anodot Business Monitoring Access Token Users API
+  version: 1.0.0
+  description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
+servers:
+- url: https://app.anodot.com
+tags:
+- name: Users
+paths:
+  /api/v2/users:
+    get:
+      summary: Get the list of all users in the account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Users
+    post:
+      summary: Create user in account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Users
+x-generated-from: https://docs.anodot.com/
+x-generated-by: claude-crawl-2026-05-08

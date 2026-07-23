@@ -1,0 +1,124 @@
+openapi: 3.1.0
+info:
+  title: Anodot Business Monitoring Access Token Alerts API
+  version: 1.0.0
+  description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
+servers:
+- url: https://app.anodot.com
+tags:
+- name: Alerts
+paths:
+  /api/v2/alerts:
+    get:
+      summary: Get all alert configurations
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alerts
+    post:
+      summary: Create new alert configuration
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alerts
+  /api/alerts/{alertID}:
+    get:
+      summary: Retrieve single alert configuration
+      parameters:
+      - name: alertID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alerts
+  /api/v2/alerts/{alertID}:
+    put:
+      summary: Edit alert configuration
+      parameters:
+      - name: alertID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alerts
+    delete:
+      summary: Delete alert
+      parameters:
+      - name: alertID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alerts
+  /api/v2/alerts/{alertID}/pause:
+    post:
+      summary: Pause alert
+      parameters:
+      - name: alertID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alerts
+  /api/v2/alerts/{alertID}/resume:
+    post:
+      summary: Resume alert
+      parameters:
+      - name: alertID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alerts
+x-generated-from: https://docs.anodot.com/
+x-generated-by: claude-crawl-2026-05-08

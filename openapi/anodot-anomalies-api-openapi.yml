@@ -1,0 +1,89 @@
+openapi: 3.1.0
+info:
+  title: Anodot Business Monitoring Access Token Anomalies API
+  version: 1.0.0
+  description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
+servers:
+- url: https://app.anodot.com
+tags:
+- name: Anomalies
+paths:
+  /api/v2/anomalies:
+    get:
+      summary: Get all anomalies based on a search query
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Anomalies
+  /api/v2/anomalies/count:
+    get:
+      summary: Count anomalies in a timeframe
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Anomalies
+  /api/v2/anomalies/tokenMap:
+    get:
+      summary: Retrieves the token map for an anomaly
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Anomalies
+  /api/v2/anomalies/{anomalyId}/metrics:
+    get:
+      summary: Get anomaly data with abnormal metrics
+      parameters:
+      - name: anomalyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Anomalies
+  /api/v2/anomalies/{anomalyId}/metric/{metricId}:
+    get:
+      summary: Retrieve specific metric anomaly data
+      parameters:
+      - name: anomalyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: metricId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Anomalies
+x-generated-from: https://docs.anodot.com/
+x-generated-by: claude-crawl-2026-05-08

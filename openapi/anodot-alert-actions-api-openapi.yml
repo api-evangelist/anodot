@@ -1,0 +1,119 @@
+openapi: 3.1.0
+info:
+  title: Anodot Business Monitoring Access Token Alert Actions API
+  version: 1.0.0
+  description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
+servers:
+- url: https://app.anodot.com
+tags:
+- name: Alert Actions
+paths:
+  /api/v2/alert-actions:
+    get:
+      summary: Get all alert actions
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alert Actions
+  /api/v2/alert-actions/{actionId}:
+    get:
+      summary: Get specific alert action
+      parameters:
+      - name: actionId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alert Actions
+  /api/v2/alert-actions/create:
+    post:
+      summary: Create new alert action
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alert Actions
+  /api/v2/alert-actions/{actionID}:
+    put:
+      summary: Update alert action
+      parameters:
+      - name: actionID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alert Actions
+    delete:
+      summary: Delete alert action
+      parameters:
+      - name: actionID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alert Actions
+  /api/v2/alert-actions/usage:
+    get:
+      summary: Get alert action usage statistics
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alert Actions
+  /api/v2/alert-actions/usage/{actionID}:
+    get:
+      summary: Get usage by action ID
+      parameters:
+      - name: actionID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Alert Actions
+x-generated-from: https://docs.anodot.com/
+x-generated-by: claude-crawl-2026-05-08

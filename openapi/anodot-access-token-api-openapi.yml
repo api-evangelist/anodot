@@ -1,0 +1,24 @@
+openapi: 3.1.0
+info:
+  title: Anodot Business Monitoring Access Token API
+  version: 1.0.0
+  description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
+servers:
+- url: https://app.anodot.com
+tags:
+- name: Access Token
+paths:
+  /api/v2/access-token/:
+    post:
+      summary: Request a bearer token
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Access Token
+x-generated-from: https://docs.anodot.com/
+x-generated-by: claude-crawl-2026-05-08

@@ -1,0 +1,167 @@
+openapi: 3.1.0
+info:
+  title: Anodot Business Monitoring Access Token Forecast API
+  version: 1.0.0
+  description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
+servers:
+- url: https://app.anodot.com
+tags:
+- name: Forecast
+paths:
+  /api/v2/forecast/tasks:
+    get:
+      summary: Get forecast tasks list
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+  /api/v2/forecast/tasks/{taskId}/results:
+    get:
+      summary: Get forecast results for specific task
+      parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+  /api/v2/forecast/tasks/{taskId}/aggregate:
+    get:
+      summary: Get aggregate forecast results
+      parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+  /api/v2/forecast/metrics:
+    get:
+      summary: Get all forecast metrics
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+  /api/v2/forecast/tasks/{taskId}/metrics:
+    get:
+      summary: Get metrics for specific task
+      parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+  /api/v2/forecast/tasks/{taskId}/metrics/{metricId}/results:
+    get:
+      summary: Get results for metric per task
+      parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: metricId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+  /api/v2/forecast/metrics/{metricId}/results:
+    get:
+      summary: Get results for specific metric
+      parameters:
+      - name: metricId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+  /api/v2/forecast/metrics/{metricId}/history:
+    get:
+      summary: Get historical forecast results
+      parameters:
+      - name: metricId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+  /api/v2/forecast/tasks/{taskId}/history:
+    get:
+      summary: Get forecast history per task
+      parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Forecast
+x-generated-from: https://docs.anodot.com/
+x-generated-by: claude-crawl-2026-05-08

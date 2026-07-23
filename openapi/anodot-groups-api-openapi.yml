@@ -1,0 +1,35 @@
+openapi: 3.1.0
+info:
+  title: Anodot Business Monitoring Access Token Groups API
+  version: 1.0.0
+  description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
+servers:
+- url: https://app.anodot.com
+tags:
+- name: Groups
+paths:
+  /api/v2/groups:
+    get:
+      summary: Get the list of all groups in the account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Groups
+    post:
+      summary: Create group in account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - Groups
+x-generated-from: https://docs.anodot.com/
+x-generated-by: claude-crawl-2026-05-08
