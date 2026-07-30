@@ -4,7 +4,19 @@ description: >-
   Anodot is an AI-powered business monitoring and cloud cost management platform providing autonomous anomaly detection,
   cost optimization, and real-time alerts for cloud infrastructure, business metrics, and FinOps workflows.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anodot.png
 tags:
   - AI
   - Anomaly Detection
@@ -18,55 +30,156 @@ created: '2026-03-27'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: anodot:anodot-business-monitoring-api
-    name: Anodot Business Monitoring API
-    description: >-
-      The Anodot Business Monitoring API provides REST endpoints for anomaly detection, alert management, forecasting,
-      metric submission, user management, and data integration. It supports bearer token authentication and basic
-      authentication with a data collection key. Regional deployments cover US, EU (Frankfurt), Asia Pacific, India, and
-      US West Coast. Rate limits are 500 calls/minute by default (5,000 RPM for metric posting).
-    humanURL: https://docs.anodot.com/
-    baseURL: https://app.anodot.com
-    tags:
-      - AI
-      - Alerts
-      - Anomaly Detection
-      - Business Monitoring
-      - Forecasting
-      - Machine Learning
-      - Metrics
-      - REST
-      - Webhooks
-    properties:
-      - url: https://docs.anodot.com/
-        type: Documentation
-      - url: https://docs.anodot.com/reference/authentication
-        type: Authentication
-      - url: https://www.anodot.com/
-        type: Website
-      - url: openapi/anodot-openapi.yml
-        type: OpenAPI
-  - aid: anodot:anodot-cloud-cost-api
-    name: Anodot Cloud Cost Management API
-    description: >-
-      The Anodot Cloud Cost Management API provides programmatic access to cloud cost data, anomaly detection for cost
-      spikes, cost allocation, budget management, and optimization recommendations across AWS, Azure, and GCP.
-    humanURL: https://cloudcost.anodot.com/
-    baseURL: https://cloudcost.anodot.com
-    tags:
-      - AWS
-      - Azure
-      - Cloud Cost Management
-      - Cost Allocation
-      - Cost Optimization
-      - FinOps
-      - GCP
-      - Multi-Cloud
-    properties:
-      - url: https://cloudcost.anodot.com/hc/en-us/articles/9796736183964-What-s-New-in-Anodot-Cost
-        type: ChangeLog
-      - url: https://www.anodot.com/cloud-cost-management/
-        type: Documentation
+- aid: anodot:anodot-cloud-cost-api
+  name: Anodot Cloud Cost Management API
+  description: >-
+    The Anodot Cloud Cost Management API provides programmatic access to cloud cost data, anomaly detection
+    for cost spikes, cost allocation, budget management, and optimization recommendations across AWS,
+    Azure, and GCP.
+  humanURL: https://cloudcost.anodot.com/
+  baseURL: https://cloudcost.anodot.com
+  tags:
+  - AWS
+  - Azure
+  - Cloud Cost Management
+  - Cost Allocation
+  - Cost Optimization
+  - FinOps
+  - GCP
+  - Multi-Cloud
+  properties:
+  - url: https://cloudcost.anodot.com/hc/en-us/articles/9796736183964-What-s-New-in-Anodot-Cost
+    type: ChangeLog
+  - url: https://www.anodot.com/cloud-cost-management/
+    type: Documentation
+- aid: anodot:anodot-access-token-api
+  name: Anodot Access Token API
+  description: The Access Token API from Anodot — 1 operation(s) for access token.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Access Token
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-access-token-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-alert-actions-api
+  name: Anodot Alert Actions API
+  description: The Alert Actions API from Anodot — 6 operation(s) for alert actions.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Alert Actions
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-alert-actions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-alerts-api
+  name: Anodot Alerts API
+  description: The Alerts API from Anodot — 5 operation(s) for alerts.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Alerts
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-alerts-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-anomalies-api
+  name: Anodot Anomalies API
+  description: The Anomalies API from Anodot — 5 operation(s) for anomalies.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Anomalies
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-anomalies-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-customers-api
+  name: Anodot Customers API
+  description: The Customers API from Anodot — 1 operation(s) for customers.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Customers
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-customers-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-forecast-api
+  name: Anodot Forecast API
+  description: The Forecast API from Anodot — 9 operation(s) for forecast.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Forecast
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-forecast-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-groups-api
+  name: Anodot Groups API
+  description: The Groups API from Anodot — 1 operation(s) for groups.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-groups-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-users-api
+  name: Anodot Users API
+  description: The Users API from Anodot — 1 operation(s) for users.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-users-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
 common:
   - type: AgenticAccess
     url: agentic-access/anodot-agentic-access.yml
