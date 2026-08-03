@@ -1,0 +1,28 @@
+{
+  "provider": "anodot",
+  "sources": [
+    "anodot-access-token-api-openapi.yml",
+    "anodot-alert-actions-api-openapi.yml",
+    "anodot-alerts-api-openapi.yml",
+    "anodot-anomalies-api-openapi.yml",
+    "anodot-customers-api-openapi.yml",
+    "anodot-forecast-api-openapi.yml",
+    "anodot-groups-api-openapi.yml",
+    "anodot-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "anodot-access-token-api-openapi.yml",
+    "anodot-alert-actions-api-openapi.yml",
+    "anodot-alerts-api-openapi.yml",
+    "anodot-anomalies-api-openapi.yml",
+    "anodot-customers-api-openapi.yml",
+    "anodot-forecast-api-openapi.yml",
+    "anodot-groups-api-openapi.yml",
+    "anodot-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
