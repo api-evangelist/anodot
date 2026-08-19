@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Anodot Business Monitoring Access Token Anomalies API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Anomalies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all anomalies based on a search query",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/anomalies"
+          },
+          "docs": "Get all anomalies based on a search query"
+        },
+        {
+          "info": {
+            "name": "Count anomalies in a timeframe",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/anomalies/count"
+          },
+          "docs": "Count anomalies in a timeframe"
+        },
+        {
+          "info": {
+            "name": "Retrieves the token map for an anomaly",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/anomalies/tokenMap"
+          },
+          "docs": "Retrieves the token map for an anomaly"
+        },
+        {
+          "info": {
+            "name": "Get anomaly data with abnormal metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/anomalies/:anomalyId/metrics",
+            "params": [
+              {
+                "name": "anomalyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get anomaly data with abnormal metrics"
+        },
+        {
+          "info": {
+            "name": "Retrieve specific metric anomaly data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/anomalies/:anomalyId/metric/:metricId",
+            "params": [
+              {
+                "name": "anomalyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metricId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve specific metric anomaly data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

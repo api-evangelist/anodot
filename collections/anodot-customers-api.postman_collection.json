@@ -1,0 +1,105 @@
+{
+  "item": [
+    {
+      "id": "166d22ba-8415-4e36-99c0-438f66479f82",
+      "name": "Customers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a8a3d4a4-8707-417e-8a21-abdfd0276331",
+          "name": "Retrieve customer ID",
+          "request": {
+            "name": "Retrieve customer ID",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "customers",
+                "id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1fd9a449-e7b1-4a5a-a5a5-d75b3eb856f1",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "customers",
+                    "id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.anodot.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "eea218e4-26f4-4946-8b70-00b000b0737e",
+    "name": "Anodot Business Monitoring Access Token Customers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.",
+      "type": "text/plain"
+    }
+  }
+}

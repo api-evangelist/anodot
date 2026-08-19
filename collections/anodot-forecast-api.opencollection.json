@@ -1,0 +1,171 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Anodot Business Monitoring Access Token Forecast API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Forecast",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get forecast tasks list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/tasks"
+          },
+          "docs": "Get forecast tasks list"
+        },
+        {
+          "info": {
+            "name": "Get forecast results for specific task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/results",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get forecast results for specific task"
+        },
+        {
+          "info": {
+            "name": "Get aggregate forecast results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/aggregate",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get aggregate forecast results"
+        },
+        {
+          "info": {
+            "name": "Get all forecast metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/metrics"
+          },
+          "docs": "Get all forecast metrics"
+        },
+        {
+          "info": {
+            "name": "Get metrics for specific task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/metrics",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get metrics for specific task"
+        },
+        {
+          "info": {
+            "name": "Get results for metric per task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/metrics/:metricId/results",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "metricId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get results for metric per task"
+        },
+        {
+          "info": {
+            "name": "Get results for specific metric",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/metrics/:metricId/results",
+            "params": [
+              {
+                "name": "metricId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get results for specific metric"
+        },
+        {
+          "info": {
+            "name": "Get historical forecast results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/metrics/:metricId/history",
+            "params": [
+              {
+                "name": "metricId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get historical forecast results"
+        },
+        {
+          "info": {
+            "name": "Get forecast history per task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/forecast/tasks/:taskId/history",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get forecast history per task"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,130 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Anodot Business Monitoring Access Token Alerts API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Alerts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all alert configurations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/alerts"
+          },
+          "docs": "Get all alert configurations"
+        },
+        {
+          "info": {
+            "name": "Create new alert configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.anodot.com/api/v2/alerts"
+          },
+          "docs": "Create new alert configuration"
+        },
+        {
+          "info": {
+            "name": "Retrieve single alert configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/alerts/:alertID",
+            "params": [
+              {
+                "name": "alertID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve single alert configuration"
+        },
+        {
+          "info": {
+            "name": "Edit alert configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.anodot.com/api/v2/alerts/:alertID",
+            "params": [
+              {
+                "name": "alertID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Edit alert configuration"
+        },
+        {
+          "info": {
+            "name": "Delete alert",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.anodot.com/api/v2/alerts/:alertID",
+            "params": [
+              {
+                "name": "alertID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete alert"
+        },
+        {
+          "info": {
+            "name": "Pause alert",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.anodot.com/api/v2/alerts/:alertID/pause",
+            "params": [
+              {
+                "name": "alertID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Pause alert"
+        },
+        {
+          "info": {
+            "name": "Resume alert",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.anodot.com/api/v2/alerts/:alertID/resume",
+            "params": [
+              {
+                "name": "alertID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Resume alert"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

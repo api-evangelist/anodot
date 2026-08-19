@@ -1,0 +1,123 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Anodot Business Monitoring Access Token Alert Actions API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Alert Actions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all alert actions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/alert-actions"
+          },
+          "docs": "Get all alert actions"
+        },
+        {
+          "info": {
+            "name": "Get specific alert action",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/alert-actions/:actionId",
+            "params": [
+              {
+                "name": "actionId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get specific alert action"
+        },
+        {
+          "info": {
+            "name": "Create new alert action",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.anodot.com/api/v2/alert-actions/create"
+          },
+          "docs": "Create new alert action"
+        },
+        {
+          "info": {
+            "name": "Update alert action",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.anodot.com/api/v2/alert-actions/:actionID",
+            "params": [
+              {
+                "name": "actionID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update alert action"
+        },
+        {
+          "info": {
+            "name": "Delete alert action",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.anodot.com/api/v2/alert-actions/:actionID",
+            "params": [
+              {
+                "name": "actionID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete alert action"
+        },
+        {
+          "info": {
+            "name": "Get alert action usage statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/alert-actions/usage"
+          },
+          "docs": "Get alert action usage statistics"
+        },
+        {
+          "info": {
+            "name": "Get usage by action ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/alert-actions/usage/:actionID",
+            "params": [
+              {
+                "name": "actionID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get usage by action ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

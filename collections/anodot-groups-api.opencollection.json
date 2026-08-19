@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Anodot Business Monitoring Access Token Groups API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the list of all groups in the account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.anodot.com/api/v2/groups"
+          },
+          "docs": "Get the list of all groups in the account"
+        },
+        {
+          "info": {
+            "name": "Create group in account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.anodot.com/api/v2/groups"
+          },
+          "docs": "Create group in account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
