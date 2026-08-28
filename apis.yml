@@ -4,6 +4,18 @@ description: >-
   Anodot is an AI-powered business monitoring and cloud cost management platform providing autonomous anomaly detection,
   cost optimization, and real-time alerts for cloud infrastructure, business metrics, and FinOps workflows.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
