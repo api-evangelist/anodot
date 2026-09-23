@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Anodot Business Monitoring Access Token Alert Actions API
+  title: Anodot Business Monitoring Alert Actions API
   version: 1.0.0
   description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
 servers:
@@ -20,6 +20,8 @@ paths:
                 type: object
       tags:
       - Alert Actions
+      operationId: getApiV2AlertActions
+      x-operation-id-source: derived
   /api/v2/alert-actions/{actionId}:
     get:
       summary: Get specific alert action
@@ -38,6 +40,8 @@ paths:
                 type: object
       tags:
       - Alert Actions
+      operationId: getApiV2AlertActionsByActionId
+      x-operation-id-source: derived
   /api/v2/alert-actions/create:
     post:
       summary: Create new alert action
@@ -50,6 +54,8 @@ paths:
                 type: object
       tags:
       - Alert Actions
+      operationId: postApiV2AlertActionsCreate
+      x-operation-id-source: derived
   /api/v2/alert-actions/{actionID}:
     put:
       summary: Update alert action
@@ -68,6 +74,8 @@ paths:
                 type: object
       tags:
       - Alert Actions
+      operationId: putApiV2AlertActionsByActionID
+      x-operation-id-source: derived
     delete:
       summary: Delete alert action
       parameters:
@@ -85,6 +93,8 @@ paths:
                 type: object
       tags:
       - Alert Actions
+      operationId: deleteApiV2AlertActionsByActionID
+      x-operation-id-source: derived
   /api/v2/alert-actions/usage:
     get:
       summary: Get alert action usage statistics
@@ -97,6 +107,8 @@ paths:
                 type: object
       tags:
       - Alert Actions
+      operationId: getApiV2AlertActionsUsage
+      x-operation-id-source: derived
   /api/v2/alert-actions/usage/{actionID}:
     get:
       summary: Get usage by action ID
@@ -115,5 +127,7 @@ paths:
                 type: object
       tags:
       - Alert Actions
+      operationId: getApiV2AlertActionsUsageByActionID
+      x-operation-id-source: derived
 x-generated-from: https://docs.anodot.com/
 x-generated-by: claude-crawl-2026-05-08

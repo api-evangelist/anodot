@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Anodot Business Monitoring Access Token Forecast API
+  title: Anodot Business Monitoring Forecast API
   version: 1.0.0
   description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
 servers:
@@ -20,6 +20,8 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastTasks
+      x-operation-id-source: derived
   /api/v2/forecast/tasks/{taskId}/results:
     get:
       summary: Get forecast results for specific task
@@ -38,6 +40,8 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastTasksByTaskIdResults
+      x-operation-id-source: derived
   /api/v2/forecast/tasks/{taskId}/aggregate:
     get:
       summary: Get aggregate forecast results
@@ -56,6 +60,8 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastTasksByTaskIdAggregate
+      x-operation-id-source: derived
   /api/v2/forecast/metrics:
     get:
       summary: Get all forecast metrics
@@ -68,6 +74,8 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastMetrics
+      x-operation-id-source: derived
   /api/v2/forecast/tasks/{taskId}/metrics:
     get:
       summary: Get metrics for specific task
@@ -86,6 +94,8 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastTasksByTaskIdMetrics
+      x-operation-id-source: derived
   /api/v2/forecast/tasks/{taskId}/metrics/{metricId}/results:
     get:
       summary: Get results for metric per task
@@ -109,6 +119,8 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastTasksByTaskIdMetricsByMetricIdResults
+      x-operation-id-source: derived
   /api/v2/forecast/metrics/{metricId}/results:
     get:
       summary: Get results for specific metric
@@ -127,6 +139,8 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastMetricsByMetricIdResults
+      x-operation-id-source: derived
   /api/v2/forecast/metrics/{metricId}/history:
     get:
       summary: Get historical forecast results
@@ -145,6 +159,8 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastMetricsByMetricIdHistory
+      x-operation-id-source: derived
   /api/v2/forecast/tasks/{taskId}/history:
     get:
       summary: Get forecast history per task
@@ -163,5 +179,7 @@ paths:
                 type: object
       tags:
       - Forecast
+      operationId: getApiV2ForecastTasksByTaskIdHistory
+      x-operation-id-source: derived
 x-generated-from: https://docs.anodot.com/
 x-generated-by: claude-crawl-2026-05-08

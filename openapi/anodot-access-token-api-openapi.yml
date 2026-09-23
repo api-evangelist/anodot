@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Anodot Business Monitoring Access Token API
   version: 1.0.0
@@ -20,5 +20,7 @@ paths:
                 type: object
       tags:
       - Access Token
+      operationId: postApiV2AccessToken
+      x-operation-id-source: derived
 x-generated-from: https://docs.anodot.com/
 x-generated-by: claude-crawl-2026-05-08

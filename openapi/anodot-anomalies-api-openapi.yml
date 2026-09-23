@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Anodot Business Monitoring Access Token Anomalies API
+  title: Anodot Business Monitoring Anomalies API
   version: 1.0.0
   description: Minimal OpenAPI specification for the Anodot Business Monitoring API, covering authentication, anomalies, users and groups, forecasting, alerts, and alert actions. Generated from the public Anodot documentation.
 servers:
@@ -20,6 +20,8 @@ paths:
                 type: object
       tags:
       - Anomalies
+      operationId: getApiV2Anomalies
+      x-operation-id-source: derived
   /api/v2/anomalies/count:
     get:
       summary: Count anomalies in a timeframe
@@ -32,6 +34,8 @@ paths:
                 type: object
       tags:
       - Anomalies
+      operationId: getApiV2AnomaliesCount
+      x-operation-id-source: derived
   /api/v2/anomalies/tokenMap:
     get:
       summary: Retrieves the token map for an anomaly
@@ -44,6 +48,8 @@ paths:
                 type: object
       tags:
       - Anomalies
+      operationId: getApiV2AnomaliesTokenMap
+      x-operation-id-source: derived
   /api/v2/anomalies/{anomalyId}/metrics:
     get:
       summary: Get anomaly data with abnormal metrics
@@ -62,6 +68,8 @@ paths:
                 type: object
       tags:
       - Anomalies
+      operationId: getApiV2AnomaliesByAnomalyIdMetrics
+      x-operation-id-source: derived
   /api/v2/anomalies/{anomalyId}/metric/{metricId}:
     get:
       summary: Retrieve specific metric anomaly data
@@ -85,5 +93,7 @@ paths:
                 type: object
       tags:
       - Anomalies
+      operationId: getApiV2AnomaliesByAnomalyIdMetricByMetricId
+      x-operation-id-source: derived
 x-generated-from: https://docs.anodot.com/
 x-generated-by: claude-crawl-2026-05-08
