@@ -35,7 +35,7 @@ tags:
   - Business Monitoring
   - Cloud Cost Management
   - FinOps
-  - Machine-Learning
+  - Machine Learning
   - Observability
 tags_raw:
   - AI
@@ -45,6 +45,7 @@ tags_raw:
   - FinOps
   - Machine Learning
   - Observability
+  - Machine-Learning
 url: https://raw.githubusercontent.com/api-evangelist/anodot/refs/heads/main/apis.yml
 created: '2026-03-27'
 modified: '2026-05-19'
