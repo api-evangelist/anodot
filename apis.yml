@@ -206,6 +206,9 @@ apis:
   - type: Website
     url: https://www.anodot.com/
 common:
+  - type: CapabilityMap
+    url: capabilities/anodot-capability-edges.yml
+    name: Anodot Business Capability Map
   - type: AgenticAccess
     url: agentic-access/anodot-agentic-access.yml
   - type: DomainSecurity
