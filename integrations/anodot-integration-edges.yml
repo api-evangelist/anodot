@@ -3,11 +3,11 @@ edges:
 - partner_name: Twilio Segment
   partner: segment
   partner_match: aggregator
-  marketplace: coverage
+  marketplace: segment-partner-destinations
   channel: partner-built
-  direction: partner-built
-  type: coverage
-  relationship: connector-coverage
+  direction: third-party
+  type: marketplace
+  relationship: platform-app
   evidence: https://www.twilio.com/docs/segment/connections/destinations/catalog/anodot
   coverage_role:
   - destination
@@ -46,8 +46,29 @@ edges:
       - event
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
+- partner_name: Grafana (own)
+  partner: grafana-com
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://grafana.com/grafana/plugins/anodot-panel/
+  mirror_of: grafana-com/integrations/grafana-com-integration-edges.yml
+  apps:
+  - Anodot
+  - Anodot Datasource
+  listing_count: 2
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Panel
+  badges:
+  - signature:commercial
 method: searched
 checked:
+- grafana-com/integrations/grafana-com-integration-edges.yml
 - https://docs.mparticle.com/integrations/anodot/event/
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/anodot
 source:
