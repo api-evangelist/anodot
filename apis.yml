@@ -61,6 +61,15 @@ apis:
   baseURL: https://cloudcost.anodot.com
   tags:
   - AWS
+  - Microsoft Azure
+  - Cloud Cost Management
+  - Cost Allocation
+  - Cost Optimization
+  - FinOps
+  - GCP
+  - Multi-Cloud
+  tags_raw:
+  - AWS
   - Azure
   - Cloud Cost Management
   - Cost Allocation
