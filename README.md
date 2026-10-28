@@ -1,4 +1,4 @@
-# Anodot (anodot)
+# Anodot
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,98 +66,132 @@
 
 Anodot is an AI-powered business monitoring and cloud cost management platform providing autonomous anomaly detection, cost optimization, and real-time alerts for cloud infrastructure, business metrics, and FinOps workflows.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/anodot/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/anodot/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Anomaly Detection · Business Monitoring · Cloud Cost Management · FinOps · Machine Learning · Observability
 
-## Scope
+## Anodot on APIs.io
 
-- **Type:** Index
+Everything profiled for Anodot is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/anodot/](https://apis.io/providers/anodot/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (9)
 
-- AI
-- Anomaly Detection
-- Business Monitoring
-- Cloud Cost Management
-- FinOps
-- Machine Learning
-- Observability
+- [Anodot Cloud Cost Management API](https://apis.io/apis/anodot/anodot-cloud-cost-api/) — The Anodot Cloud Cost Management API provides programmatic access to cloud cost data, anomaly detection for cost spikes, cost allocation, budget management,…
+- [Anodot Access Token API](https://apis.io/apis/anodot/anodot-access-token-api/) — The Access Token API from Anodot — 1 operation(s) for access token.
+- [Anodot Alert Actions API](https://apis.io/apis/anodot/anodot-alert-actions-api/) — The Alert Actions API from Anodot — 6 operation(s) for alert actions.
+- [Anodot Alerts API](https://apis.io/apis/anodot/anodot-alerts-api/) — The Alerts API from Anodot — 5 operation(s) for alerts.
+- [Anodot Anomalies API](https://apis.io/apis/anodot/anodot-anomalies-api/) — The Anomalies API from Anodot — 5 operation(s) for anomalies.
+- [Anodot Customers API](https://apis.io/apis/anodot/anodot-customers-api/) — The Customers API from Anodot — 1 operation(s) for customers.
+- [Anodot Forecast API](https://apis.io/apis/anodot/anodot-forecast-api/) — The Forecast API from Anodot — 9 operation(s) for forecast.
+- [Anodot Groups API](https://apis.io/apis/anodot/anodot-groups-api/) — The Groups API from Anodot — 1 operation(s) for groups.
+- [Anodot Users API](https://apis.io/apis/anodot/anodot-users-api/) — The Users API from Anodot — 1 operation(s) for users.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-27
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Anodot Business Monitoring API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Anodot Business Monitoring API provides REST endpoints for anomaly detection, alert management, forecasting, metric submission, user management, and data integration. It supports bearer token authentication and basic authentication with a data collection key. Regional deployments cover US, EU (Frankfurt), Asia Pacific, India, and US West Coast. Rate limits are 500 calls/minute by default (5,000 RPM for metric posting).
+- [Anodot Agentic Access](https://apis.io/agentic-access/anodot/anodot-agentic-access/)
 
-- **Human URL:** [https://docs.anodot.com/](https://docs.anodot.com/)
-- **Base URL:** `https://app.anodot.com`
+#### Collections (9)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- AI
-- Alerts
-- Anomaly Detection
-- Business Monitoring
-- Forecasting
-- Machine Learning
-- Metrics
-- REST
-- Webhooks
+- [Anodot Business Monitoring API](https://apis.io/collections/anodot/open-anodot/)
+- [Anodot Business Monitoring Access Token API](https://apis.io/collections/anodot/open-anodot-access-token-api/)
+- [Anodot Business Monitoring Access Token Alert Actions API](https://apis.io/collections/anodot/open-anodot-alert-actions-api/)
+- [Anodot Business Monitoring Access Token Alerts API](https://apis.io/collections/anodot/open-anodot-alerts-api/)
+- [Anodot Business Monitoring Access Token Anomalies API](https://apis.io/collections/anodot/open-anodot-anomalies-api/)
+- [Anodot Business Monitoring Access Token Customers API](https://apis.io/collections/anodot/open-anodot-customers-api/)
+- [Anodot Business Monitoring Access Token Forecast API](https://apis.io/collections/anodot/open-anodot-forecast-api/)
+- [Anodot Business Monitoring Access Token Groups API](https://apis.io/collections/anodot/open-anodot-groups-api/)
+- [Anodot Business Monitoring Access Token Users API](https://apis.io/collections/anodot/open-anodot-users-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://docs.anodot.com/)
-- [Authentication](https://docs.anodot.com/reference/authentication)
-- [Website](https://www.anodot.com/)
-- [OpenAPI](openapi/anodot-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/anodot.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/anodot.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Anodot Cloud Cost Management API
+- [Anodot Domain Security](https://apis.io/security/anodot/anodot-domain-security/)
 
-The Anodot Cloud Cost Management API provides programmatic access to cloud cost data, anomaly detection for cost spikes, cost allocation, budget management, and optimization recommendations across AWS, Azure, and GCP.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://cloudcost.anodot.com/](https://cloudcost.anodot.com/)
-- **Base URL:** `https://cloudcost.anodot.com`
+Published plans, tiers and prices.
 
-#### Tags
+- [Anodot Plans Pricing](https://apis.io/plans/anodot/anodot-plans-pricing/)
 
-- AWS
-- Azure
-- Cloud Cost Management
-- Cost Allocation
-- Cost Optimization
-- FinOps
-- GCP
-- Multi-Cloud
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Changelog](https://cloudcost.anodot.com/hc/en-us/articles/9796736183964-What-s-New-in-Anodot-Cost)
-- [Documentation](https://www.anodot.com/cloud-cost-management/)
-- [Postman Collection](collections/anodot.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/anodot.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Anodot Rate Limits](https://apis.io/rate-limits/anodot/anodot-rate-limits/)
 
-## Common Properties
+#### FinOps (1)
 
-- [LinkedIn](https://www.linkedin.com/company/anodot)
+What the API costs to run, by operation.
+
+- [Anodot Finops](https://apis.io/finops/anodot/anodot-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.anodot.com/)
 - [Documentation](https://docs.anodot.com/)
-- [Portal](https://cloudcost.anodot.com/)
-- [Resources](https://www.anodot.com/resources/)
-- [Features](https://www.anodot.com/cloud-cost-management/)
-- [Features](https://www.anodot.com/cloud-cost-management/reporting/)
 - [Blog](https://www.anodot.com/blog/)
-- [Privacy Policy](https://www.anodot.com/privacy-policy/)
-- [Terms of Service](https://www.anodot.com/terms-of-service/)
-- [GitHub Organization](https://github.com/anodot)
-- [Integrations](https://www.anodot.com/integrations/)
+- [Terms of service](https://www.anodot.com/terms-of-service/)
+- [Privacy policy](https://www.anodot.com/privacy-policy/)
+- [GitHub](https://github.com/anodot)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 30.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 40.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 28.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/anodot/](https://apis.io/providers/anodot/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Anodot: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/anodot/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
