@@ -1,0 +1,269 @@
+aid: anodot
+name: Anodot
+description: >-
+  Anodot is an AI-powered business monitoring and cloud cost management platform providing autonomous anomaly detection,
+  cost optimization, and real-time alerts for cloud infrastructure, business metrics, and FinOps workflows.
+type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anodot.png
+tags:
+  - Artificial Intelligence
+  - Anomaly Detection
+  - Business Monitoring
+  - Cloud Cost Management
+  - FinOps
+  - Machine Learning
+  - Observability
+tags_raw:
+  - AI
+  - Anomaly Detection
+  - Business Monitoring
+  - Cloud Cost Management
+  - FinOps
+  - Machine Learning
+  - Observability
+  - Machine-Learning
+url: https://raw.githubusercontent.com/api-evangelist/anodot/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-05-19'
+specificationVersion: '0.23'
+apis:
+- aid: anodot:anodot-cloud-cost-api
+  name: Anodot Cloud Cost Management API
+  description: >-
+    The Anodot Cloud Cost Management API provides programmatic access to cloud cost data, anomaly detection
+    for cost spikes, cost allocation, budget management, and optimization recommendations across AWS,
+    Azure, and GCP.
+  humanURL: https://cloudcost.anodot.com/
+  baseURL: https://cloudcost.anodot.com
+  tags:
+  - Amazon Web Services
+  - Microsoft Azure
+  - Cloud Cost Management
+  - Cost Allocation
+  - Cost Optimization
+  - FinOps
+  - GCP
+  - Multi-Cloud
+  tags_raw:
+  - AWS
+  - Azure
+  - Cloud Cost Management
+  - Cost Allocation
+  - Cost Optimization
+  - FinOps
+  - GCP
+  - Multi-Cloud
+  properties:
+  - url: https://cloudcost.anodot.com/hc/en-us/articles/9796736183964-What-s-New-in-Anodot-Cost
+    type: ChangeLog
+  - url: https://www.anodot.com/cloud-cost-management/
+    type: Documentation
+- aid: anodot:anodot-access-token-api
+  name: Anodot Access Token API
+  description: The Access Token API from Anodot — 1 operation(s) for access token.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Access Token
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-access-token-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-alert-actions-api
+  name: Anodot Alert Actions API
+  description: The Alert Actions API from Anodot — 6 operation(s) for alert actions.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Alert Actions
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-alert-actions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-alerts-api
+  name: Anodot Alerts API
+  description: The Alerts API from Anodot — 5 operation(s) for alerts.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Alerts
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-alerts-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-anomalies-api
+  name: Anodot Anomalies API
+  description: The Anomalies API from Anodot — 5 operation(s) for anomalies.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Anomalies
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-anomalies-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-customers-api
+  name: Anodot Customers API
+  description: The Customers API from Anodot — 1 operation(s) for customers.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Customers
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-customers-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-forecast-api
+  name: Anodot Forecast API
+  description: The Forecast API from Anodot — 9 operation(s) for forecast.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Forecast
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-forecast-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-groups-api
+  name: Anodot Groups API
+  description: The Groups API from Anodot — 1 operation(s) for groups.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - Group
+  tags_raw:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-groups-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+- aid: anodot:anodot-users-api
+  name: Anodot Users API
+  description: The Users API from Anodot — 1 operation(s) for users.
+  humanURL: https://docs.anodot.com/
+  baseURL: https://app.anodot.com
+  tags:
+  - User
+  tags_raw:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/anodot-users-api-openapi.yml
+  - type: Documentation
+    url: https://docs.anodot.com/
+  - type: Authentication
+    url: https://docs.anodot.com/reference/authentication
+  - type: Website
+    url: https://www.anodot.com/
+common:
+  - type: Plans
+    url: plans/anodot-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/anodot-rate-limits.yml
+  - type: FinOps
+    url: finops/anodot-finops.yml
+  - type: CapabilityMap
+    url: capabilities/anodot-capability-edges.yml
+    name: Anodot Business Capability Map
+  - type: AgenticAccess
+    url: agentic-access/anodot-agentic-access.yml
+  - type: DomainSecurity
+    url: security/anodot-domain-security.yml
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/anodot
+  - url: https://www.anodot.com/
+    name: Anodot Website
+    type: Website
+  - url: https://docs.anodot.com/
+    name: Anodot API Documentation
+    type: Documentation
+  - url: https://cloudcost.anodot.com/
+    name: Anodot Cloud Cost Portal
+    type: Portal
+  - url: https://www.anodot.com/resources/
+    name: Anodot Resources
+    type: Resources
+  - url: https://www.anodot.com/cloud-cost-management/
+    name: Cloud Cost Management
+    type: Features
+  - url: https://www.anodot.com/cloud-cost-management/reporting/
+    name: Cost Reporting
+    type: Features
+  - url: https://www.anodot.com/blog/
+    name: Anodot Blog
+    type: Blog
+  - url: https://www.anodot.com/privacy-policy/
+    name: Privacy Policy
+    type: PrivacyPolicy
+  - url: https://www.anodot.com/terms-of-service/
+    name: Terms of Service
+    type: TermsOfService
+  - url: https://github.com/anodot
+    name: Anodot GitHub Organization
+    type: GitHubOrganization
+  - type: Integrations
+    url: https://www.anodot.com/integrations/
+integrations:
+  - name: StatsD
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
