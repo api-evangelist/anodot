@@ -68,6 +68,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  heartbeat/2026-11-02.yml:
+    method: unknown
+    evidence: no authorship recorded
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -77,7 +80,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-10-31T095417.yml:
+  kin/checks-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -137,6 +140,15 @@ artifacts:
   kin/score-2026-10-31T095417.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-01T171331.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-01T200237.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-02T082323.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/anodot-access-token-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -161,12 +173,21 @@ artifacts:
   openapi/anodot-users-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  patterns/anodot-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/anodot-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact
   rate-limits/anodot-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
+  rules/anodot-rules.yml:
+    method: generated
+    evidence: declared in the artifact
   security/anodot-domain-security.yml:
     method: unknown
     evidence: no authorship recorded
+  sla/anodot-sla.yml:
+    method: generated
+    evidence: declared in the artifact
